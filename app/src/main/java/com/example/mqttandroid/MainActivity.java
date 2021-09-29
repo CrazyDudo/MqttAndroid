@@ -66,7 +66,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
                 tvStatus.setText("connect...");
                 connect();
-
                 break;
 
 
@@ -102,7 +101,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 @Override
                 public void onFailure(IMqttToken asyncActionToken, Throwable exception) {
                     tvStatus.setText("publish onFailure");
-                    Log.e(TAG, "onFailure: " + exception.getMessage());
+                    Log.e(TAG, "onFailure: ");
 
                 }
             });
@@ -127,7 +126,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 @Override
                 public void onFailure(IMqttToken asyncActionToken, Throwable exception) {
 
-                    tvStatus.setText("subscribe onFailure:" + exception.getMessage());
+                    tvStatus.setText("subscribe onFailure:");
                 }
             });
         } catch (MqttException e) {
@@ -195,7 +194,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 public void onFailure(IMqttToken asyncActionToken, Throwable exception) {
 
                     tvStatus.setText("connect onFailure");
-                    Log.e(TAG, "connect onFailure: " + exception.getMessage());
+                    Log.e(TAG, "connect onFailure: " );
                 }
             });
         } catch (MqttException e) {
